@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBOutlet weak var challengeLabel: UILabel!
+    @IBOutlet weak var enterNameTextField: UITextField!
+    
+    @IBOutlet weak var ballerTextField: UITextField!
+    
+    @IBOutlet weak var topButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +30,30 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func buttonButtonPressed(sender: UIButton) {
+        messageLabel.hidden = false
+        messageLabel.text = enterNameTextField.text
+        messageLabel.textColor = UIColor.purpleColor()
+        
+        challengeLabel.hidden = false
+        challengeLabel.text = enterNameTextField.text
+        challengeLabel.textColor = UIColor.orangeColor()
+        challengeLabel.backgroundColor = UIColor.redColor()
+      
+        
+        enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
+        
+        topButton.setTitle("OH YEAH", forState: UIControlState.Normal)
+        topButton.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+        
+        
+        
+        
+        
+    }
+   
+    
 }
+
 
